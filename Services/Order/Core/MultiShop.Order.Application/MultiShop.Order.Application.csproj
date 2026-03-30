@@ -7,7 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Mediator\" />
+    <None Include="Features\Mediator\Commands\OrderingCommands\RemoveOrderingCommand.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="14.1.0" />
+    <PackageReference Include="MediatR.Extensions.Autofac.DependencyInjection" Version="14.0.0" />
+    <PackageReference Include="MediatR.Extensions.FluentValidation.AspNetCore" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
