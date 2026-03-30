@@ -31,12 +31,12 @@ namespace MultiShop.Order.Persistence.Repositories
             return await _context.Set<T>().ToListAsync();
         }
 
-        public Task GetByFilterAsync(Expression<Func<T, bool>> filter)
+        public Task<T> GetByFilterAsync(Expression<Func<T, bool>> filter)
         {
             return _context.Set<T>().SingleOrDefaultAsync(filter);
         }
 
-        public Task GetByIdAsync(int id)
+        public Task<T> GetByIdAsync(int id)
         {
             return _context.Set<T>().FindAsync(id).AsTask();
         }
