@@ -21,6 +21,8 @@ namespace MultiShop.Order.Application.Features.CQRS.Handlers.AddressHandlers
             values.City = command.City;
             values.District = command.District;
             values.UserId = command.UserId;
+
+            await _repository.UpdateAsync(values);
         }
     }
 }
