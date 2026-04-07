@@ -36,4 +36,50 @@ public static class Config
             new ApiScope("OrderFullPermission", "Full access to Order API"),
             new ApiScope("CatalogReadPermission", "Read only access to Catalog API"),
         };
+
+    public static IEnumerable<Client> Clients =>
+        new Client[]
+        {
+            //Visitor
+            new Client
+            {
+                ClientId = "MultiShopVisitorId",
+                ClientName = "MultiShop Visitor User",
+                AllowedGrantTypes = GrantTypes.ClientCredentials,
+                ClientSecrets = { new Secret("multishopsecret".Sha256()) },
+                AllowedScopes =
+                {
+                    "CatalogReadPermission"
+                }
+            },
+
+            //Manager
+            new Client
+            {
+                ClientId = "MultiShopManagerId",
+                ClientName = "MultiShop Manager User",
+                AllowedGrantTypes = GrantTypes.ClientCredentials,
+                ClientSecrets = { new Secret("multishopsecret".Sha256()) },
+                AllowedScopes =
+                {
+                    "CatalogFullPermission",
+                    "CatalogReadPermission",
+                }
+            },
+
+            //Admin
+            new Client
+            {
+                ClientId = "MultiShopAdminId",
+                ClientName = "MultiShop Admin User",
+                AllowedGrantTypes = GrantTypes.ClientCredentials,
+                ClientSecrets = { new Secret("multishopsecret".Sha256()) },
+                AllowedScopes =
+                {
+                    "CatalogFullPermission",
+                    "DiscountFullPermission",
+                    "OrderFullPermission",
+                }
+            }
+        };
 }
