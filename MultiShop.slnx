@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/IdentityServer/">
+    <Project Path="IdentityServer/MultiShop.IdentityServer/MultiShop.IdentityServer.csproj" />
+  </Folder>
   <Folder Name="/Services/" />
   <Folder Name="/Services/Catalog/">
     <Project Path="Services/Catalog/MultiShop.Catalog/MultiShop.Catalog.csproj" />
