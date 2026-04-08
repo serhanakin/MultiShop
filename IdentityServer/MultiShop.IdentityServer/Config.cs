@@ -1,4 +1,5 @@
-﻿using Duende.IdentityServer.Models;
+﻿using Duende.IdentityServer;
+using Duende.IdentityServer.Models;
 
 namespace MultiShop.IdentityServer;
 
@@ -17,7 +18,8 @@ public static class Config
             new ApiResource("ResourceOrder")
             {
                 Scopes = { "OrderFullPermission" }
-            }
+            },
+            new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
     public static IEnumerable<IdentityResource> IdentityResources =>
@@ -35,6 +37,7 @@ public static class Config
             new ApiScope("DiscountFullPermission", "Full access to Discount API"),
             new ApiScope("OrderFullPermission", "Full access to Order API"),
             new ApiScope("CatalogReadPermission", "Read only access to Catalog API"),
+            new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
         };
 
     public static IEnumerable<Client> Clients =>
@@ -77,9 +80,15 @@ public static class Config
                 AllowedScopes =
                 {
                     "CatalogFullPermission",
+                    "CatalogReadPermission",
                     "DiscountFullPermission",
                     "OrderFullPermission",
-                }
+                    IdentityServerConstants.LocalApi.ScopeName,
+                    IdentityServerConstants.StandardScopes.Email,
+                    IdentityServerConstants.StandardScopes.OpenId,
+                    IdentityServerConstants.StandardScopes.Profile,
+                },
+                AccessTokenLifetime = 600,
             }
         };
 }
