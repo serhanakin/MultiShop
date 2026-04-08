@@ -52,7 +52,7 @@ public static class Config
                 ClientSecrets = { new Secret("multishopsecret".Sha256()) },
                 AllowedScopes =
                 {
-                    "CatalogReadPermission"
+                    "DiscountFullPermission"
                 }
             },
 
