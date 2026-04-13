@@ -36,7 +36,7 @@ namespace MultiShop.Basket.Controllers
             return Ok("Basket has been saved successfully!");
         }
 
-        [HttpPost]
+        [HttpDelete]
         public async Task<IActionResult> DeleteBasket()
         {
             await _basketService.DeleteBasket(_loginService.GetUserId);
