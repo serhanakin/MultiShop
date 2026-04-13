@@ -6,5 +6,6 @@ namespace MultiShop.Basket.Controllers
     [ApiController]
     public class BasketsController : ControllerBase
     {
+
     }
 }
