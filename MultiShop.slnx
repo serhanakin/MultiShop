@@ -3,6 +3,9 @@
     <Project Path="IdentityServer/MultiShop.IdentityServer/MultiShop.IdentityServer.csproj" />
   </Folder>
   <Folder Name="/Services/" />
+  <Folder Name="/Services/Basket/">
+    <Project Path="Services/Basket/MultiShop.Basket/MultiShop.Basket.csproj" Id="5d93b063-5d57-47d4-9b51-c2979cb92d15" />
+  </Folder>
   <Folder Name="/Services/Cargo/">
     <Project Path="Services/Cargo/MultiShop.Cargo.BusinessLayer/MultiShop.Cargo.BusinessLayer.csproj" Id="f68924d3-230b-4a1c-bf67-4de3d6db7a70" />
     <Project Path="Services/Cargo/MultiShop.Cargo.DataAccessLayer/MultiShop.Cargo.DataAccessLayer.csproj" Id="42b3d2af-04f6-4358-a6a0-f7aa402f9730" />
