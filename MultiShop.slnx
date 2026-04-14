@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Frontends/">
+    <Project Path="Frontends/MultiShop.WebUI/MultiShop.WebUI.csproj" Id="bc2ca03b-fecf-4209-a78a-67a38df1484b" />
+  </Folder>
   <Folder Name="/IdentityServer/">
     <Project Path="IdentityServer/MultiShop.IdentityServer/MultiShop.IdentityServer.csproj" />
   </Folder>
